@@ -2,25 +2,13 @@ import os
 import funciones.corefile as cf
 clientes = {
 }
-clientes ={
-    'Cc': '00',
-    'Nombre': '',
-    'Apellido': '',
-    'Telefono' : [],
-    'EmailPersonal': '',
-    'EmailCorprotativo': '',
-    'Edad': 0,
-}
-
-Telefono= {    
-    "Descripción":'',
-    "Numerico": '000'
-}
-
-
 cf.MY_DATABASE ='data/clientes.json'
-def NewCustomer():
-    pass
+def NewCustomer(customer : dict):
+    clientes.update(customer)
+    cf.AddData(customer['cc'], clientes)
+
+def delCustomer(customers : dict):
+    cf.Elimiar(customers)
 
 def validarArchivoClientes():
     if(cf.checkFile()):

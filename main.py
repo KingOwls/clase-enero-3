@@ -15,7 +15,6 @@ if __name__ == '__main__':
         else:
             if(opMainMenu == 1):
                 menu.generarClientesMenu()
-                
             elif(opMainMenu ==2):
                 pass
             elif(opMainMenu ==3):
